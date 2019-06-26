@@ -8,42 +8,40 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Value {
 
-    private Long id;
-    private String phrase;
-    private LocalDate date;
+	private Long id;
+	private String phrase;
 
-    public Value() {
-    }
+	public Value() {
+	}
 
-    public LocalDate getDate() {
-    	return null;
-    }
-    
-    public void setDate() {
-    	
-    }
-    
-    public Long getId() {
-        return this.id;
-    }
-    @JsonProperty("quote")
-    public String getPhrase() {
-        return this.phrase;
-    }
+	public LocalDate getDate() {
+		return null;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-    @JsonProperty("quote")
-    public void setPhrase(String phrase) {
-        this.phrase = phrase;
-    }
+	public void setDate() {
 
-    @Override
-    public String toString() {
-        return "Value{" +
-                "id=" + id +
-                ", phrase='" + phrase + '\'' +
-                '}';
-    }
+	}
+
+	public Long getId() {
+		return this.id;
+	}
+
+	@JsonProperty("quote")
+	public String getPhrase() {
+		return this.phrase;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	@JsonProperty("quote")
+	public void setPhrase(String phrase) {
+		this.phrase = phrase;
+	}
+
+	@Override
+	public String toString() {
+		return "Value{" + "id=" + id + ", phrase='" + phrase + '\'' + '}';
+	}
 }
